@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ececec;
+    background-image: url(../assets/wallpaper.svg);
+    background-position: 0% 50%;
+    background-size: 50%;
+    background-repeat: repeat;
+    animation: animation 125s linear infinite;
+}
+
+@keyframes animation {
+    100% {
+        background-position: 2500px -2500px;
+    }
+}
+
+a,
+a:visited,
+a:focus,
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+h2 {
+    font-size: 24pt;
+
+}
+
+span {
+    font-family: 'Noto Sans', sans-serif;
+    Font-Size: 12pt;
+}
+
+button {
+    outline: none;
+}
+
+.body {
+    font-family: 'Fjalla One', sans-serif;
+    Font-Size: 48px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    height: 100vh;
+    width: 100vw;
+    padding: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.title .parent {
+    display: block;
+    width: 33%;
+    height: auto;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+.title img {
+    display: block;
+}
+
+.buttons {
+    width: 100%;
+    display: block;
+}
+
+.buttons a {
+    width: auto;
+    white-space: nowrap;
+    display: inline-block;
+    width: 100%;
+}
+
+#btn-start,
+#btn-rules {
+    border-radius: 25px;
+    border: 5px solid white;
+    color: white;
+    text-align: center;
+    font-size: 14pt;
+    text-transform: uppercase;
+    padding: 10px 0;
+    text-align: center;
+    transition: 0.3s;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 100%;
+    background-size: 200% auto;
+}
+
+#btn-about {
+    color: black;
+    text-align: center;
+    font-size: 12pt;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#btn-start {
+    background-image: linear-gradient(150deg, #1488CC, #2B32B2);
+}
+
+#btn-rules {
+    background-image: linear-gradient(150deg, #eea849, #f46b45);
+}
+
+#btn-start:hover,
+#btn-rules:hover,
+#btn-about:hover {
+    background-position: right center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 25%;
+}
+
+.modal {
+    background-color: white;
+    z-index: 100;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    box-shadow: 0 0 500px rgba(0, 0, 0, 0.3);
+}
+
+.modal .info {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0 5%;
+}
+
+.game {
+    text-align: center;
+    width: 100%;
+    box-shadow: none;
+}
+
+.notify {
+    margin: 0 10px;
+    padding: 15px 0;
+}
+
+.modal .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 5%;
+    box-shadow: none;
+}
+
+.close {
+    box-shadow: none;
+}
+
+.close a {
+    color: #ffffff;
+    background: #D3D3D3;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 11pt;
+    font-weight: 200;
+    vertical-align: middle;
+    transition: 0.3s;
+    background-size: 200% auto;
+
+}
+
+.close a:hover {
+    color: black;
+}
+
+.modal .name {
+    box-shadow: none;
+}
+
+
+.modal .text {
+    background-color: white;
+    box-shadow: none;
+}
+
+.modal .text ul {
+    display: block;
+    list-style-type: none;
+    line-height: 20px;
+    text-align: center;
+}
+
+
+.modal .text ul li span {
+    font-size: 12pt;
+    width: 100%;
+}
+
+.list {
+    line-height: 10px;
+    text-align: justify !important;
+}
+
+.options,
+.click {
+    padding: 20px 0;
+    width: inherit;
+    justify-content: center;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    box-shadow: none;
+}
+
+.options a {
+    background-image: linear-gradient(150deg, #1488CC, #2B32B2);
+    font-size: 12pt;
+    padding: 10px 10px;
+    display: block;
+    border-radius: 25px;
+    transition: 0.3s;
+    background-size: 200% auto;
+    margin: 5px 5px;
+    text-align: center;
+    width: 75%;
+}
+
+.options a:hover {
+    background-position: right center;
+}
+
+.backtitle,
+#back {
+    background: transparent !important;
+    color: gray !important;
+}
+
+.backtitle:hover,
+#back:hover {
+    color: #eea849 !important;
+}
+
+.click a {
+    background-image: linear-gradient(150deg, #1488CC, #2B32B2);
+    font-size: 12pt;
+    width: 75%;
+    padding: 10px 0;
+    display: block;
+    border-radius: 25px;
+    transition: 0.3s;
+    background-size: 200% auto;
+    text-align: center;
+    margin: auto;
+}
+
+.click a:hover {
+    background-position: right center;
+}
+
+.box {
+    margin: auto;
+    display: inline-block;
+}
+
+.question {
+    background-color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 500px rgba(0, 0, 0, 0.3);
+}
+
+.box .heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    vertical-align: middle;
+    justify-items: center;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+    padding: 10px;
+    box-shadow: none;
+}
+
+.box .heading span {
+    margin: 0 25px;
+}
+
+#score,
+#level,
+#quit {
+    padding: 10px 5px;
+    border-radius: 25px;
+    font-weight: 600;
+    width: 100%;
+}
+
+#score {
+    background-image: linear-gradient(150deg, #eea849, #f46b45);
+    color: white;
+
+}
+
+
+#quit a {
+    color: #1488CC;
+    transition: 0.5s ease-out;
+}
+
+#quit a:hover,
+#quit a:focus {
+    color: #2B32B2;
+}
+
+#solve {
+    font-size: 24pt;
+    font-weight: 600;
+    box-shadow: none !important;
+}
+
+#lvl {
+    color: #1488CC;
+}
+
+
+#name {
+    height: 35px;
+    margin-top: 20px;
+    padding: 20px;
+    width: 75%;
+    border-radius: 25px;
+    border: none;
+    background-color: #dedede;
+    outline: none;
+}
+
+input {
+    font-size: 12pt;
+    text-align: center;
+}
+
+
+.jokers {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    vertical-align: middle;
+    justify-items: center;
+    align-items: center;
+    padding-top: 10px;
+    line-height: 20px;
+}
+
+.jokers button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    background-image: linear-gradient(150deg, #eea849, #f46b45);
+    border: none;
+    transition: 0.5s;
+    color: #fefefe;
+}
+
+.jokers button:hover {
+    box-shadow: 0 0 25px 1px #f46b45, 0.1rem 0.1rem 10px #eea849;
+}
+
+.answer-box {
+    padding: 25px 50px;
+}
+
+.equation {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.equations p {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.solutions {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 20px;
+    box-shadow: none;
+}
+
+.solutions button {
+    display: block;
+    height: 50px;
+    width: 100%;
+    min-width: 100%;
+    border-radius: 25px;
+    border: 2px solid #dedede;
+    margin: 10px 0;
+    background-color: white;
+    transition: all 0.5s;
+
+}
+
+.solutions button:hover {
+    box-shadow: inset 0.5rem 0.5rem 50px #dddddd;
+}
+
+
+@media screen and (max-width:992px) {
+    body {
+        background-size: 75%;
+    }
+
+    .title .parent {
+        width: 100%;
+    }
+
+    #container {
+        margin: 0;
+    }
+
+    .list li span {
+        font-size: 8pt;
+    }
+
+    .list {
+        line-height: 10px;
+        text-align: justify;
+    }
+
+    #modal-1 .name h2,
+    #modal-1 .name h2 {
+        font-size: 18pt;
+    }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width:600px) {
+    body {
+        background-size: 75%;
+    }
+
+    .title .parent {
+        width: 100%;
+    }
+
+    #container {
+        margin: 0;
+    }
+
+    .list li span {
+        font-size: 8pt;
+    }
+
+    .list {
+        line-height: 10px;
+        text-align: justify;
+    }
+
+    #modal-1 .name h2,
+    #modal-1 .name h2 {
+        font-size: 18pt;
+    }
+}
